@@ -581,70 +581,43 @@ button {
 
 .argo__section{
     background-color: var(--clr-dark);
-    /* Add image */
-    /*background-image */
     color: var(--clr-light);
     text-align: center;
+    height:auto;
+    margin:auto;
 }
 
 .argo__title {
     color: var(--clr-accent);
     position: relative;
     text-align: center;
-    margin-bottom: 0.5em;
-}
-
-.argo__title::after{
-    content: '';
-    display: block;
-    width: 3em;
-    height: 1px;
-    margin: 0.5em auto 1em;
-    background: var(--clr-light);
-    opacity: 0.25;
-}
-.argo {
-    margin-bottom: 4em;
+    margin-bottom: 1em;
 }
 
 .argo_background {
     background-color:beige;
-    height: 250px;
-    padding: 2em;
-    margin-left:10em;
-    margin-right:10em;
-    margin-bottom: 2em;
-
+    width: auto;
+    height: auto;
 }
 
-.argo_college,
-.argo_env {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+.argo_character {
+    display:inline-block;
+    max-width: 250px;
+    max-height: 250px;
     margin-bottom: 1em;
 }
 
-
-.argo__item {
-    /*max-width:700px;*/
-    text-align: left;
-    margin-bottom:1em;
+.argo_collage,
+.argo_env {
+    margin: 0.5em auto;;
+    width: auto;
+    height: auto;
 }
+
 .argo_text{
     max-width:1000px;
-    margin: 0 auto;
+    margin: 1em auto;
     text-align: center;
-
-}
-.argo_text.middle{
-    margin-top:1em;
-}
-.argo_character {
-    display:inline-block;
-    width: 250px;
-    height: 250px;
 }
 
 /* Internships */
