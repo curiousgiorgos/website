@@ -486,112 +486,96 @@ button {
     transition: transform 200ms ease-in-out;
 }
 
+
 /* Spotify */
 
 .project_spot{
     background-color: var(--clr-dark);
     color: var(--clr-dark);
     text-align: center;
-    height:1700px;
-}
+    margin:auto;
+    height:auto;
+    }
+
 .section_spot__title--project {
     color: var(--clr-accent);
     position: relative;
     text-align: center;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
 }
 
 .container {
-    padding: 3em;
     display:grid;
-    grid-gap: 2em;
-    margin-left:0.5em;
-    margin-right:1em;
+    margin:auto;
 }
+
 .spotify__description{
     color:var(--clr-light);
-    padding-left: 2em;
-    min-width : 400px;
-    padding-right: 0;
+    min-width : 300px;
+    margin-top:1em;
+    margin-bottom:1em;
 }
 
 .spot__img{
-    min-width: 900px;
-    height:400px;
-    display:block;
-    margin:auto;}
+    margin:auto;
+    width: auto;
+    height: auto;
+}
 
 @media (min-width: 1450px) {
     .container {
         grid-template-columns: repeat(2,1fr);
     }
     .spotify__description {
-        min-width: 400px;
-        max-width: 500px;
+        min-width: 300px;
+        max-width: 600px;
+        margin:auto;
     }
-    .project_spot{
-        height:1250px;
-    }
+
     .spot__img{
-        position: relative;
-    }
+        min-width:800px;}
 }
 
 /* Prediction in the Microbiome project */
 
-
 .project_microbiome{
     background-color: var(--clr-light);
-    /* Add image */
-    /*background-image */
     color: var(--clr-dark);
     text-align: center;
-    height:500px;
+    margin:auto;
+    height:auto;
 }
 
 .project_microbiome__title{
     color: var(--clr-accent);
     position: relative;
     text-align: center;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
 }
 
-.container {
-    padding: 3em;
-    display:grid;
-    grid-gap: 2em;
-    margin-left:0.5em;
-    margin-right:1em;
-}
 .microbiome__description{
     color:var(--clr-dark);
-    padding-left: 2em;
-    min-width : 400px;
-    padding-right: 0;
+    min-width : 300px;
+    margin-top:1em;
+    margin-bottom:1em;
 }
 
 .microbiome__img{
-    min-width: 900px;
-    height:400px;
-    display:block;
-    margin:auto;}
-
-@media (min-width: 1450px) {
-    .container {
-        grid-template-columns: repeat(2,1fr);
-    }
-    .microbiome__description {
-        min-width: 400px;
-        max-width: 500px;
-    }
-    .project_microbiome{
-        height:1250px;
-    }
-    .microbiome__img{
-        position: relative;
-    }
+    margin:auto;
+    width: auto;
+    height: auto;
 }
 
+@media (min-width: 1450px) {
+    .microbiome__description {
+        min-width: 300px;
+        max-width: 600px;
+        margin:auto;
+    }
+
+    .microbiome__img{
+        min-width:800px;}
+}
 
 /* Argo */
 
