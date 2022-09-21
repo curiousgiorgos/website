@@ -129,7 +129,6 @@ async function main(){
                     vars: [{name: constraints[i]['var'], coef: 1.0}],
                     bnds: {type: glpk.GLP_FX, ub: constraints[i]['value'], lb: constraints[i]['value']}
                 }
-            console.log(constraint)
             lp['subjectTo'].push(constraint);
         }
 
@@ -141,7 +140,6 @@ async function main(){
             }
         };
         try {
-        console.log("rinad")
         glpk.solve(lp, opt)
             .then(res => print(res))
             .catch(err => {
