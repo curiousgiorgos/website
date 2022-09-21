@@ -1,6 +1,3 @@
-
-import GLPK from '/dist/index.js';
-
 async function main(){
     let constraints = [];
     let sudoku = document.getElementsByClassName("tile__value");
