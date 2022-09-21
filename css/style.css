@@ -450,16 +450,6 @@ button {
     position: relative;
 }
 
-.section__title--project::after{
-    content: '';
-    display: block;
-    width: 3em;
-    height: 1px;
-    margin: 0.5em auto 1em;
-    background: var(--clr-dark);
-    opacity: 0.25;
-}
-
 .sudoku{
     margin-bottom: 1em;
 }
@@ -470,6 +460,7 @@ button {
     text-align: center;
     font-weight: var(--fw-bold);
 }
+
 
 .sudoku__button {
     margin-top: 1em;
