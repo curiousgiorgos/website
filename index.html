@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>curiousgiorgos portfolio</title>
+        <!-- use cloudflare normalizer for different browsers-->
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+        <!-- using font-awesome's icons-->
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href= "https://fonts.googleapis.com/css?family=Source+Code:400,900|Source+Sans+Pro:300,900&display=swap">
+        <script src="js/board.js"></script>
+        <script type="module"  src="js/sudoku.js"></script>
+
+
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <h3><strong>curiousgiorgos</strong></h3>
+            </div>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
+                    <li class="nav__item"><a href="#portfolio" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="#internships" class="nav__link">Internships</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Introduction section-->
+        <section class="intro" id="home">
+            <h1 class="section__title section__title--intro">
+                Hi, I am <strong> George Miliaras</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro"> Software Engineer</p>
+            <img src="img/me.jpg" class="intro__img" alt="this is me! But you can't see me, so who am I? ">
+        </section>
+
+        <!-- About me -->
+
+        <section class="about-me" id="about">
+            <h2 class="section__title section__title--about">
+                Who am I?
+            </h2>
+            <p class="section__subtitle section__subtitle--about">About me </p>
+            <div class="about-me__body">
+                <p class="section__subtitle section__body--about">
+                    My name is George and I am originally from Athens, Greece. Currently, I am a
+                    senior at Harvard University, studying Computer Science and Statistics and
+                    I aspire to work in the world of data after my graduation.
+                </p>
+                <p class="section__subtitle section__body--about">
+                    I like to fill my days with my passions which include coding, reading books (mostly fiction,
+                    especially the kind with cool spaceships &#128640), playing video games, and enjoying nature!
+                </p>
+                <p class="section__subtitle section__body--about">
+                    Another big part of my life is running. I used to run track semi-professionally and
+                    have represented Greece in many international competitions and currently hold three different
+                    national records.
+                </p>
+                <p>
+                    And you are currently in my website!!
+                </p>
+            </div>
+
+            <img src="img/img2.png" class="about-me__img img"  alt="second image to add ">
+        </section>
+
+        <!-- Services-->
+        <section class="my-portfolio" id="portfolio">
+            <h2 class="section_title section__title--portfolio"> Projects </h2>
+            <div class="portfolio">
+                <div class="portfolio--item">
+                    <h3>Spotify Charts</h3>
+                    <p>Inspired by the Greek top 100 songs I was curious to see what songs the world was
+                        listening to, so I decided to scrape <a class="portfolio__item__link" href='https://charts.spotify.com/home'>Spotify Charts</a>.
+                        I utilized Apache Airflow to create weekly jobs that scraped the website using Selenium and
+                        Beautiful Soup and create a data model in a sqlite database with the results. The database was
+                        then connected to PowerBI </p>
+                </div>
+                <div class="portfolio--item">
+                    <h3>Sudoku Solver</h3>
+                    <p>As part of building this website I thought that it would be intersting to add a little game, and
+                    at the same time I was reading about Constraint Satisfaction Problems, so I figured I would make a lp solver
+                    for sudoku. By utilizing the glpk solver and <a class="portfolio__item__link" href='https://github.com/jvail/glpk.js/'>glpks.js</a> you can now solve any sudoku in lighting time by yourself</p>
+                </div>
+                <div class="portfolio--item">
+                    <h3>Microbiome Bacteria Prediction</h3>
+                    <p> As part of my CS109b: Advanced Data Science course at Harvard I teamed up with three more fellow
+                        students to create a Microbiome Bacteria Prediction model. We analyzed timeseries data of over
+                        bla bla samples dfen thimamai kan ti eixame kanei alla tha ta valw kai ta psaksw alla gia tin ora
+                        prepei na valw mia akoma protasi.<p>
+                </div>
+                <div class="portfolio--item">
+                    <h3>Argo</h3>
+                    <p> Argo is a small project that is very dear to me, and hopefully not long from having its development
+                        picked up again. Sitting at the intersection of journaling and video games, it attempts to explore
+                        how video games can help mental health, with a small Homeric twist!<p>
+                </div>
+            </div> <!-- Services closes -->
+            <p class="project__txt">Scroll to check them out! </p>
+        </section>
+
+
+
+        <!-- Sudoku -->
+
+        <section class="project" id="projects">
+            <h2 class="section_title section__title--project"> Sudoku LP Solver</h2>
+            <div class="sudoku">
+                <div id="sudoku" class="sudoku__board">
+                </div>
+                <button type="button" class="sudoku__button" onclick="Solver();">Solve Sudoku</button>
+                <button type="button" class="sudoku__button"  onclick="ResetBoard();">Reset the board</button>
+                <button type="button" class="sudoku__button"  onclick="clearBoard();">Clear the board</button>
+                <div id="error"></div>
+            </div>
+        </section>
+        <!-- Sudoku closes -->
+
+
+        <!-- Microbiome -->
+        <section class="project_spot" id="projects_spot">
+            <h2 class="section_spot_title section_spot__title--project"> Spotify Charts</h2>
+
+            <div class="container">
+                <img src="img/spotify/spotify_charts1.png" class="spot__img" alt="Country view ">
+                <div class="spotify__description">
+                    <h3>Song features</h3>
+                    <p> Here is the PBI result! After the data are extracted I utilized SQL to partition create a data model
+                        of the data, breaking them into 5 tables: a fact table, a genre table, an artist table, a country table
+                        and a song table.
+
+                        The main view of the dashboard houses the data grouped on Artist, Country, and Genre level. You can
+                        use the Streams by Country graph to select a single country of selection of countries to see the
+                        breakdown of their song preferences. </p>
+                </div>
+
+            </div>
+
+            <div class="container">
+                <img src="img/spotify/spotify_charts2.png" class="spot__img" alt="Song view">
+
+                <div class="spotify__description">
+                    <h3>Spotify Charts</h3>
+                    <p>The second view of the dashboard includes an analytics on the songs' features. These data where collected
+                    by utilizing the <a class="portfolio__item__link" href="https://developer.spotify.com/documentation/web-api/">
+                            Spotify API</a> and querying for the characteristics of each unique song extracted by the scraper.
+                    The user has the ability to filter by country and genre to compare the top 50 songs of the selection
+                    <strong>You can access the dashboard <a class="portfolio__item__link" href="https://app.powerbi.com/groups/me/reports/1fc195af-7f99-41f9-acf3-1a49b2353c18/ReportSection">
+                        here</a></strong></p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="project_microbiome" id="projects_microbiome">
+            <h2 class="project_microbiome__title"> Forecasting Bacteria Behavior in the Microbiome</h2>
+
+            <div class="container">
+                <img src="img/microbiome/arima.png" class="microbiome__img" alt="Arima model">
+
+                <div class="microbiome__description">
+                    <h3>Setting</h3>
+                    <p> As a part of my final project for Harvard's CS109b my project group attempted to understand the effects
+                        of bacteria in the microbiome, and predict its future makeup. As part of our analysis we analyzed samples drawn
+                        from 9 mice over 60 day period, including over 600 different bacteria.
+
+                </div>
+
+            </div>
+            <div class="container">
+                <img src="img/microbiome/var.png" class="microbiome__img" alt="Var model">
+
+                <div class="microbiome__description">
+                    <h3>Methodology</h3>
+                    <p>  Our work started by implementing a Tensorflow ETL pipelines to prepare our data for analysis and model training. We
+                        then utilized clustering methods to reduce the dimensionality of our data through using the Hamming
+                        Distance of Genetic Sequences and Agglomerative Clustering to determine the clusters, resulting in 140 clusters.
+                        We then fitted an Auto Regressive Integrated Moving Average (ARIMA) model and a Vector Autoregressive (VAR) model
+                        on the first 50 days of our date and created forectasts
+                        on the following 60 days
+                    </p>
+                </div>
+
+            </div>
+        </section>
+        <!-- Microbiome closes -->
+
+
+        <!-- Argo  -->
+        <section class="argo__section" id="argo">
+            <h2 class="argo__title "> Argo </h2>
+            <div class="argo">
+                <div class="argo__item">
+                    <div  class="argo_background">
+                        <img src="img/argo/argo.gif" class="argo_character">
+                    </div>
+                </div>
+
+                <div class="argo__item">
+                    <img src="img/argo/argo-collage.png" class="argo_college">
+                    <p class="argo_text">
+                        Welcome to Argos! Atop a flying reimagining of Odysseys' ship the user is encouraged to
+                        charter their own unique journey to Ithaca. As the zeppelin travels, the user will record theirs
+                        and Odysseus' unique adventures and trials.
+                    </p>
+                    <p class="argo_text middle">
+                        Aiming to promote journaling and mental health, Argos incorporates gaming features
+                        to make the process of journaling effortless and easier to stick by. The user can interact and
+                        tend to the needs of Odysseus' dog, complete small challenges to maintain the Argos,
+                        and grow a garden in the clouds.
+                        Progression is tracked by number of diary logs and is encouraged by unlocking new features.
+                    </p>
+                </div>
+
+                <div class="argo__item">
+                    <img src="img/argo/argo-env.png" class="argo_env">
+
+                    <p class="argo_text">
+                        With the ultimate goal of fostering journaling and introspection, Argos attempts to help the user
+                        see past their journal entries and reflect on how they have grown as a person as they navigate to
+                        their own "Ithaca."
+
+                    </p>
+                </div>
+
+
+            </div>
+            </div> <!-- Argo closes -->
+
+        </section>
+        <!-- Internships -->
+        <section class="internships" id="internships">
+            <h2 class="internships__title "> Internships </h2>
+            <div class="internship">
+                <div class="internship__item">
+                    <h3>Data & Analytics Consultant -- Ernst & Young</h3>
+                    <p> As part of my gap year I joined Ernst & Young as a full time D&A consultant. There, I had the
+                        opportunity to work on a big data Supply Chain Intelligence Platform project as a BI developer.
+                        </p>
+                    <p>
+                        My responsibilities
+                        included coordinating and leading a 6 developer effort to migrate existing dashboards from a direct
+                        query approach to an OLAP cube solution in SQL Server Analysis Services. The resulting dashboards
+                        saw a 10x load time improvement, resulting in dashboards that manipulated millions of rows loading
+                        within seconds.
+                    </p>
+                    <p>
+                        Additionally, I worked closely with the business team to create complex DAX and SQL queries that
+                        captured important insights in our data. While, I was in constant communication with the data
+                        generation and data modeling teams about possible problems and improvements in the data.
+                    </p>
+
+                </div>
+                </div>
+            </div> <!-- Internships closes -->
+
+        </section>
+
+        <!-- Footer -->
+        <footer class ="footer" id="contact">
+            <a href="mailto:geomiliaras@gmail.com" class="footer__link">geomiliaras@gmail.com</a>
+            <a href="file/Resume_Miliaras.pdf" class="footer__link">Resume</a>
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://github.com/curiousgiorgos">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://www.linkedin.com/in/george-miliaras/">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+        <!-- Footer closes -->
+    </body>
+</html>
