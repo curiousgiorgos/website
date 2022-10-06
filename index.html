@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>George Miliaras</title>
+        <title>curiousgiorgos portfolio</title>
         <!-- use cloudflare normalizer for different browsers-->
         <link rel="stylesheet"
               href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
@@ -14,13 +14,9 @@
 
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href= "https://fonts.googleapis.com/css?family=Source+Code:400,900|Source+Sans+Pro:300,900&display=swap">
-
-        <script type="module">
-            import GLPK from './js/glpk.js/dist/index.js';
-            window.GLPK = GLPK
-        </script>
         <script src="js/board.js"></script>
-        <script src="js/sudoku.js"></script>
+        <script type="module"  src="js/sudoku.js"></script>
+
 
     </head>
     <body>
@@ -32,7 +28,7 @@
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
                     <li class="nav__item"><a href="#portfolio" class="nav__link">Projects</a></li>
-                    <li class="nav__item"><a href="#internships" class="nav__link">Internships</a></li>
+                    <li class="nav__item"><a href="#internships" class="nav__link">Work Experience</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                 </ul>
             </nav>
@@ -116,7 +112,7 @@
 
         <!-- Sudoku -->
 
-        <section class="project" id="project_sudoku">
+        <section class="project" id="projects">
             <h2 class="section_title section__title--project"> Sudoku LP Solver</h2>
             <div class="sudoku">
                 <div id="sudoku" class="sudoku__board">
@@ -210,7 +206,9 @@
                         <img src="img/argo/argo.gif" class="argo_character">
                     </div>
                 </div>
-                 <img src="img/argo/argo-collage.png" class="argo_collage">
+
+                <div class="argo__item">
+                    <img src="img/argo/argo-collage.png" class="argo_college">
                     <p class="argo_text">
                         Welcome to Argos! Atop a flying reimagining of Odysseys' ship the user is encouraged to
                         charter their own unique journey to Ithaca. As the zeppelin travels, the user will record theirs
@@ -223,6 +221,9 @@
                         and grow a garden in the clouds.
                         Progression is tracked by number of diary logs and is encouraged by unlocking new features.
                     </p>
+                </div>
+
+                <div class="argo__item">
                     <img src="img/argo/argo-env.png" class="argo_env">
 
                     <p class="argo_text">
@@ -231,6 +232,7 @@
                         their own "Ithaca."
 
                     </p>
+                </div>
 
 
             </div>
@@ -239,7 +241,7 @@
         </section>
         <!-- Internships -->
         <section class="internships" id="internships">
-            <h2 class="internships__title "> Internships </h2>
+            <h2 class="internships__title "> Work Experience </h2>
             <div class="internship">
                 <div class="internship__item">
                     <h3>Data & Analytics Consultant -- Ernst & Young</h3>
@@ -248,9 +250,9 @@
                         </p>
                     <p>
                         My responsibilities
-                        included coordinating and leading a 6 developer effort to migrate existing dashboards from a direct
+                        included coordinating and leading a 5 developer effort to migrate existing dashboards from a direct
                         query approach to an OLAP cube solution in SQL Server Analysis Services. The resulting dashboards
-                        saw a 10x load time improvement, resulting in dashboards that manipulated millions of rows loading
+                        saw a 10x load time improvement, resulting in dashboards that utilized millions of rows loading
                         within seconds.
                     </p>
                     <p>
